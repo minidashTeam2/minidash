@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
+
     steps:
       - uses: actions/github-script@v7
         with:
           script: |
-            const { github, context } = require('@actions/github');
             const pull_request = context.payload.pull_request;
 
             if (!pull_request) {
@@ -23,7 +23,7 @@ jobs:
 
             const body = pull_request.body;
 
-            if (!body || body.trim() === '') {
+            if (!body || body.trim() === "") {
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
