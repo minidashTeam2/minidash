@@ -23,7 +23,9 @@ jobs:
 
             const body = pull_request.body;
 
-            if (!body || body.trim() === "") {
+            const message = "아래 기입내용을 작성해주시고 해당 라인을 삭제해주세요."
+
+            if (!body || body.includes(message)) {
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
