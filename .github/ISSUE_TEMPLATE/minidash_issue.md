@@ -1,3 +1,11 @@
+---
+name: Minidash Issue
+about: Minidash 프로젝트 관련 이슈를 생성할 때 사용하세요.
+title: "[Issue] "
+labels: ""
+assignees: ""
+---
+
 # minidash issue 양식
 
 ## 이슈 제목
